@@ -1,7 +1,7 @@
 ﻿/**
 *Cria a tabela tb_fornecedor.
 */
-CREATE TEMP TABLE tb_fornecedor
+CREATE TABLE tb_fornecedor
 (
     produto character varying(70), 
     segmento character varying(70),
