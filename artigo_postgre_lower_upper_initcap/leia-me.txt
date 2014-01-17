@@ -1,0 +1,16 @@
+
+O script "funcao_lower_upper_e_initcap.sql" pode ser executado através PgAdmin ou através de linha de comando utilizando o psql
+
+Descrição das opções do psql 
+
+-h => nome ou ip do host. Como eu estou executando localmente na minha máquina utilizei o ip 127.0.0.1. Também poderia ter passado o nome localhost.
+
+-U => nome do usuário, no meu caso postgres.
+
+-d => nome do banco de dados, o meu banco chama-se db_teste.
+
+-f => localização do arquivo, no meu caso o arquivo está no diretório: home/kelly/Documentos/blog/funcao_lower_upper_e_initcap.sql
+
+Exemplo de utilização do psql
+
+psql -h 127.0.0.1 -U postgres -d db_teste -f /home/kelly/Documentos/blog/funcao_lower_upper_e_initcap.sql
