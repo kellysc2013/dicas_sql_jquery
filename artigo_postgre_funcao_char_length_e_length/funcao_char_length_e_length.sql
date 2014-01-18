@@ -1,5 +1,5 @@
 ﻿/**
-*Atenção!!! Descomente a sentença abaixo, somente se desejar excluir a tabela alunos
+*Atenção!!! Descomente a sentença abaixo, somente se desejar excluir as tabela alunos ou chave
 */
 --DROP TABLE IF EXISTS alunos;
 --DROP TABLE IF EXISTS chave;
