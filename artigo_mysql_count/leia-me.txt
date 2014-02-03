@@ -1,0 +1,44 @@
+Para acessar o mysql através da linha de comando (Linux ou Windows) utilize:
+
+mysql -u<nome_do_usuário> -p
+
+-u: passe o nome do seu usuário. No meu caso o usuário é root.
+-p: senha do usuário. Não é necessário digitar a senha depois do '-p', pressione ENTER e o sistema solicitará a senha.
+
+
+Exemplo:
+mysql -uroot -p
+
+
+Digite a sua senha
+
+Exemplo:
+Enter password: *********
+
+
+Escolha o banco de dados que deseja executar o script (criar a tabela tb_fornecedor e executar as consultas)
+
+mysql>USE <nome_do_banco>
+
+No meu caso o meu banco é o db_teste
+
+Exemplo:
+mysql>USE db_teste
+
+
+Após ter escolhido o banco, rode o script. Para rodar o script digite contra-barra e ponto(\. ) acompanhado de um espaço
+e ,em seguida, o nome do arquivo.
+
+
+mysql> \. <caminho_do_arquivo>
+
+Exemplo Linux:
+mysql> \. /home/kelly/Documentos/blog/mysql_count/mysql_funcao_count.sql
+
+Exemplo Windows:
+mysql> \. D:\mysql_funcao_count.sql
+
+
+
+
+
