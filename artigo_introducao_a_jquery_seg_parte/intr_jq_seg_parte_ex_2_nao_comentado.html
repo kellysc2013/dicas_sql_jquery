@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/intr_jq_seg_parte_ex_2.css">
+        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type='text/javascript'> 
+            $(document).ready(function() {
+                $("#jq_01_msg_procedimento").click(function() {
+                     $("#jq_01_msg_usuario").slideToggle("slow");
+
+                     if ($("#jq_01_msg_procedimento").html() == "Clique aqui para esconder a mensagem!") 
+                            $("#jq_01_msg_procedimento").html("Clique aqui para exibir a mensagem!");
+                     else {
+                            $("#jq_01_msg_procedimento").html("Clique aqui para esconder a mensagem!");
+                     }
+               });
+          });
+        </script>
+    </head>
+    <body>
+        <div id="jq_01_msg_procedimento">Clique aqui para esconder a mensagem!</div>
+        <div id="jq_01_msg_usuario">
+            <p>Veja como podemos utilizar a biblioteca jquery!!!</p>
+        </div>
+    </body>
+</html>

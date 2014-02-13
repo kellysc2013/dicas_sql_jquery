@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/intr_jq_seg_parte_ex_2.css">
+        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type='text/javascript'>
+            /*Quando a página estiver carregada, o script abaixo é executado*/ 
+            $(document).ready(function() {
+                /*Quando clicar na div que tem o id="jq_01_msg_procedimento", o script abaixo é executado*/
+                $("#jq_01_msg_procedimento").click(function() {
+
+                    /*O método slideToggle() esconde e exibe a div que tem o id= "jq_01_msg_usuario".
+                      O método slideToggle() tem a função de esconder um elemento se ele esta visível
+                      e exibir se ele está escondido.  Toggle em português significa alternar. 
+                      Podemos escolher a velocidade para exibir e ocultar um elemento, 
+                      através de um parâmetro opcional. Neste caso, escolhemos
+                      "slow". Slow em português significa lento. Após a exibição do código, 
+                      comentaremos mais sobre os parâmetro de velocidade do slideToggle. 
+                     */
+                     $("#jq_01_msg_usuario").slideToggle("slow");
+
+                     /*O método html() retorna o conteúdo que está entre tags podemos compará-lo 
+                       ao innerHTML do javascript .
+                       Neste caso, retorna o conteúdo que está entre as tags 
+                       <div  id="jq_01_msg_procedimento">...</div>.
+                     */
+                     if ($("#jq_01_msg_procedimento").html() == "Clique aqui para esconder a mensagem!")
+
+                            /*Se o conteúdo dentro da div for igual a "Clique aqui para esconder a mensagem!" 
+                              será trocado para "Clique aqui para exibir a mensagem!"
+                              O método html("xxx") coloca um conteúdo entre tags. 
+                              Neste caso o conteúdo será colocado entre as tags 
+                              <div id="jq_01_msg_usuario"></div> 
+                            */ 
+                            $("#jq_01_msg_procedimento").html("Clique aqui para exibir a mensagem!");
+                     else {
+                            /*Se o conteúdo dentro da div for diferente de "Clique aqui para esconder a 
+                              mensagem!" será trocado para "Clique aqui para esconder a mensagem!"*/ 
+                            $("#jq_01_msg_procedimento").html("Clique aqui para esconder a mensagem!");
+                     }
+               });
+          });
+        </script>
+    </head>
+    <body>
+        <div id="jq_01_msg_procedimento">Clique aqui para esconder a mensagem!</div>
+        <div id="jq_01_msg_usuario">
+            <p>Veja como podemos utilizar a biblioteca jquery!!!</p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+
+	#jq_01_msg_usuario, #jq_01_msg_procedimento {
+		padding-top:3px;
+		padding-bottom:3px;
+		padding-left:1px;
+		padding-right:1px;
+		text-align:center;
+		width: 170px;
+		font-family:Arial,Helvetica,sans-serif;
+		font-size:11px;
+		margin:0px;
+	}
+
+	#jq_01_msg_usuario {
+		height: 250px;
+		background: transparent url(../img/barra_azul.png) no-repeat scroll left top;
+	}
+
+	#jq_01_msg_procedimento {
+		cursor: pointer;
+		background: transparent url(../img/barra_laranja.png) no-repeat scroll left top;
+		color: #004371;
+	}
+
+	p {
+		padding-right:10px;
+	}  

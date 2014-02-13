@@ -1,0 +1,13 @@
+            body, p#estudo {
+                  margin: 0px;
+                  padding: 0px;
+            }
+            div {
+                background-color:#F3F9FF;
+                font-family:Arial,Helvetica,sans-serif;
+                width:370px;
+                height:200px;
+                text-align:center;
+                color:blue;;
+            }
+
