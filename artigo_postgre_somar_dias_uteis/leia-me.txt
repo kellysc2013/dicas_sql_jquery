@@ -1,0 +1,36 @@
+
+Os scripts listados abaixo podem ser executado através PgAdmin ou através de linha de comando utilizando o psql
+
+
+*cria_tab_feriados_est_cid.sql: para criar as tabelas tab_feriado_federal, tab_feriado_estadual, tab_feriado_municipal, tab_cidades, tab_estados que são necessárias para executar os exemplos;
+
+*feriados_moveis.sql: cria a função feriados_moveis que calcula feriados sem data fixa. A função "feriados_moveis" é utilizada pela função "adiciona_dias_uteis";
+
+*adiciona_dias_uteis.sql: cria a função que adicionará dias úteis a uma data;
+
+*exemplo_1.sql, exemplo_2.sql e exemplo_3.sql: scripts dos exemplos 1, 2 e 3 respectivamente.
+
+
+Descrição das opções do psql: 
+
+-h => nome ou ip do host. Como eu estou executando localmente na minha máquina utilizei o ip 127.0.0.1. Também poderia ter passado o nome localhost.
+
+-U => nome do usuário, no meu caso postgres.
+
+-d => nome do banco de dados, o meu banco chama-se db_teste.
+
+-f => localização do arquivo, no meu caso os arquivos estão no diretório: home/kelly/Documentos/blog/
+
+Exemplo de utilização do psql
+
+psql -h 127.0.0.1 -U postgres -d db_teste -f /home/kelly/Documentos/blog/cria_tab_feriados_est_cid.sql
+
+psql -h 127.0.0.1 -U postgres -d db_teste -f /home/kelly/Documentos/blog/feriados_moveis.sql
+
+psql -h 127.0.0.1 -U postgres -d db_teste -f /home/kelly/Documentos/blog/adiciona_dias_uteis.sql
+
+psql -h 127.0.0.1 -U postgres -d db_teste -f /home/kelly/Documentos/blog/exemplo_1.sql
+
+psql -h 127.0.0.1 -U postgres -d db_teste -f /home/kelly/Documentos/blog/exemplo_2.sql
+
+psql -h 127.0.0.1 -U postgres -d db_teste -f /home/kelly/Documentos/blog/exemplo_3.sql
