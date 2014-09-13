@@ -32,7 +32,7 @@ SELECT codigo_produto, nome_produto FROM tb_produto;
 --1º Exemplo
 
 /*
- *Completar com o hifen ('-') a esquerda do nome dos produtos até a 10ª posição. 
+ *Completar com o hifen ('-') a esquerda dos nomes dos produtos até a 10ª posição. 
  */
 SELECT 
 nome_produto, 
