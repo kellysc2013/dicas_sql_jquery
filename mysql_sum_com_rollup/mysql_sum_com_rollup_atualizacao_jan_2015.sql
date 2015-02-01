@@ -112,9 +112,9 @@ CASE
  WHEN(segmento IS NOT NULL) THEN 0
  ELSE 1
 END,
-segmento,
+segmento DESC,
 CASE
  WHEN(produto IS NOT NULL) THEN 0
  ELSE 1
 END,
-produto;
+produto DESC;
