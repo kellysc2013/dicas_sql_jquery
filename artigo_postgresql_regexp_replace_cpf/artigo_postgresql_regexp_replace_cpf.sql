@@ -36,7 +36,7 @@ FROM tb_alunos;
  *pela expressão [:digit:]. O resultado será o mesmo. 
  */
 SELECT  
-REGEXP_REPLACE (cpf, '([[:digit:]]{3})([[:digit:]]{3})([[:digit:]]{3})([[:digit:]]{2})', '\1.\2.\3-\4 ') AS cpf 
+REGEXP_REPLACE (cpf, '([[:digit:]]{3})([[:digit:]]{3})([[:digit:]]{3})([[:digit:]]{2})', '\1.\2.\3-\4') AS cpf 
 FROM tb_alunos;
 
 /**
@@ -46,5 +46,5 @@ FROM tb_alunos;
  *pela expressão abreviada "\d". O resultado será o mesmo.
  */
 SELECT  
-REGEXP_REPLACE (cpf,  '(\d{3})(\d{3})(\d{3})(\d{2})',  '\1.\2.\3-\4 ') AS cpf 
+REGEXP_REPLACE (cpf,  '(\d{3})(\d{3})(\d{3})(\d{2})',  '\1.\2.\3-\4') AS cpf 
 FROM tb_alunos;
