@@ -32,10 +32,20 @@ FROM
 tb_endereco;
 
 /**
-*2º - Também formata a coluna CEP, mas utiliza a expressão [:digit:] ao invés de [0-9]
+*2º exemplo - Também formata a coluna CEP, mas utiliza a expressão [:digit:] ao invés de [0-9]
 */
 SELECT
 endereco,  
 regexp_replace(cep,'([[:digit:]]{5})([[:digit:]]{3})','\1-\2') as cep
 FROM 
 tb_endereco
+
+/**
+ *3º exemplo
+ *Para facilitar, podemos substituir a expressão "[[:digit:]]" que indica a utilização 
+ *de caracteres numéricos de 0 até 9, 
+ *pela expressão abreviada "\d". O resultado será o mesmo.
+ */
+SELECT  REGEXP_REPLACE (cep, '(\d{5})(\d{3})', '\1-\2') AS cep
+FROM tb_endereco;
+
