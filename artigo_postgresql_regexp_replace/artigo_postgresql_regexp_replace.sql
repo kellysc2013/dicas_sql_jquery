@@ -38,7 +38,7 @@ SELECT
 endereco,  
 regexp_replace(cep,'([[:digit:]]{5})([[:digit:]]{3})','\1-\2') as cep
 FROM 
-tb_endereco
+tb_endereco;
 
 /**
  *3º exemplo
