@@ -27,7 +27,7 @@ SELECT * FROM tb_endereco;
 */
 SELECT
 endereco,  
-REGEXP_REPLACE (cep, '([0-9]{5})([0-9]{3})', '\1-\2 ') as cep 
+REGEXP_REPLACE (cep, '([0-9]{5})([0-9]{3})', '\1-\2') as cep 
 FROM 
 tb_endereco;
 
