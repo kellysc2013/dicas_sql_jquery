@@ -37,4 +37,14 @@ FROM tb_alunos;
  */
 SELECT  
 REGEXP_REPLACE (cpf, '([[:digit:]]{3})([[:digit:]]{3})([[:digit:]]{3})([[:digit:]]{2})', '\1.\2.\3-\4 ') AS cpf 
+FROM tb_alunos;
+
+/**
+ *3º exemplo
+ *Para facilitar, podemos substituir a expressão "[[:digit:]]" que indica a utilização 
+ *de caracteres numéricos de 0 até 9, 
+ *pela expressão abreviada "\d". O resultado será o mesmo.
+ */
+SELECT  
+REGEXP_REPLACE (cpf,  '(\d{3})(\d{3})(\d{3})(\d{2})',                 '\1.\2.\3-\4 ')   AS cpf 
 FROM tb_alunos
