@@ -7,6 +7,8 @@
 
 1ª parte: damos um exemplo de como criar a tabela "tb_paciente";
 2ª parte: vamos fazer a cópia da tabela "tb_paciente" chamada "tb_paciente_bkp"
+3ª parte: vamos aprender a fazer a cópia da tabela "tb_paciente" chamada "tb_paciente_bkp_altera_col" com nome das 
+colunas diferentes das  colunas da tabela original.
  
 */
  
@@ -59,3 +61,21 @@ FROM tb_paciente;
  * A sentença SQL abaixo, cria a cópia da tabela "tb_paciente". Esta tabela se chamará "tb_paciente_bkp ".
  */
 SELECT * INTO tb_paciente_bkp FROM tb_paciente;
+
+
+ --3ª Parte
+/**
+ * A sentença SQL abaixo, cria a cópia da tabela "tb_paciente". Esta tabela se chamará 
+ *"tb_paciente_bkp_altera_col".
+ * Perceba que as colunas foram criadas com nomes diferentes da original, para isso utilizamos "AS" ao lado do
+ * do novo nome de cada coluna. 
+ */
+SELECT
+    prontuario  AS  pac_prontuario ,
+    nome  AS  pac_nome,
+    data_nasc   AS  pac_data_nasc ,
+    sexo  AS  pac_sexo,
+    peso  AS  pac_peso,
+    proc_cirurgico  AS  pac_proc_cirurgico
+INTO  tb_paciente_bkp_altera_col 
+FROM  tb_paciente;
