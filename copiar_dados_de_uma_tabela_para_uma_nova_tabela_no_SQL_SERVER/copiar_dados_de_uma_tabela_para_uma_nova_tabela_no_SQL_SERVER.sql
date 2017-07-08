@@ -99,3 +99,18 @@ SELECT
 INTO  tb_paciente_bkp_filt   
 FROM  tb_paciente 
 WHERE  sexo = 'f';
+
+ --5ª Parte
+/*
+Existe a possibilidade de criar uma nova tabela, apena com algumas colunas da tabela original, para isso, 
+colocaremos apenas as colunas desejadas, após o comando "SELECT".
+Vamos criar a tabela "tb_paciente_bkp_col",  a partir da tabela "tb_paciente", apenas com algumas colunas da tabela original. 
+Neste caso, vamos escolher as colunas: "prontuario", "nome" e "peso"
+*/
+
+SELECT
+    prontuario, 
+    nome, 
+    peso
+INTO  tb_paciente_bkp_col   
+FROM  tb_paciente;
