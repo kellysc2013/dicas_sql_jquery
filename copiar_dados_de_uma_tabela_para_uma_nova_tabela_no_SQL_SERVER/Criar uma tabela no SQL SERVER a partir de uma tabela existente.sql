@@ -1,5 +1,5 @@
 /**
- *Script do exemplo: Copiar dados de uma tabela para uma nova tabela no SQL SERVER DO BLOG DICAS SQL & JQUERY
+ *Script do exemplo: Criar uma tabela no SQL SERVER a partir de uma tabela existente DO BLOG DICAS SQL & JQUERY
  *Data: 25/06/2017 Hora: 05:48:25
  *Link do artigo: http://jquerydicas.blogspot.com.br/2017/06/copiar-dados-de-uma-tabela-para-uma.html
  
