@@ -95,5 +95,7 @@ SELECT
     data_nasc, 
     sexo, 
     peso, 
-    proc_cirurgico  
-FROM  tb_paciente_bkp_filt;
+    proc_cirurgico 
+INTO  tb_paciente_bkp_filt   
+FROM  tb_paciente 
+WHERE  sexo = 'f';
