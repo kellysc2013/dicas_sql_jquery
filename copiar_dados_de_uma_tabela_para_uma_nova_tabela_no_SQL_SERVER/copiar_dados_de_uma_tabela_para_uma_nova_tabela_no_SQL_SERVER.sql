@@ -79,3 +79,21 @@ SELECT
     proc_cirurgico  AS  pac_proc_cirurgico
 INTO  tb_paciente_bkp_altera_col 
 FROM  tb_paciente;
+
+
+ --4ª Parte
+/*
+*Existe a possibilidade de criar uma nova tabela, apena com alguns registros da tabela original, 
+*para isso utilizaremos um filtro, representado pelo comando "WHERE".
+*Vamos criar a tabela "tb_paciente_bkp_filt", a partir da tabela "tb_paciente", 
+*e vamos filtrar os pacientes, somente do sexo feminino,  ou seja,  sexo = 'f'.
+*/
+
+SELECT
+    prontuario, 
+    nome, 
+    data_nasc, 
+    sexo, 
+    peso, 
+    proc_cirurgico  
+FROM  tb_paciente_bkp_filt;
