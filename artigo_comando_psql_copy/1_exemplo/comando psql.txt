@@ -1,0 +1,2 @@
+psql -h 104.197.20.162 -d db_rem -U postgres 
+ \copy estoque(codigo, produto, categoria, marca, preco, quantidade)  from 'C:/estoque.csv' with delimiter as ';' CSV HEADER
