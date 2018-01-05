@@ -1,0 +1,5 @@
+psql -h 104.197.20.162 -d db_rem -U postgres 
+\COPY ( SELECT codigo, produto, categoria, marca, preco, quantidade FROM estoque) to 'C:/temp/estoque_sc.csv'  WITH DELIMITER AS ';' 
+
+
+ 
