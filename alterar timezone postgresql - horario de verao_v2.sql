@@ -25,7 +25,7 @@ SELECT * FROM pg_timezone_names
 --Neste exemplo é:
 --D:/postgre_dados_96/postgresql.conf
 
---4ª Etapa) Alterar os parametro do arquivo "timezone" e "log_timezone"
+--4ª Etapa) Alterar os parametro do arquivo "timezone" e "log_timezone", em seguida, salve o arquivo.
 
 timezone = 'America/Sao_Paulo'
 log_timezone = 'America/Sao_Paulo'
