@@ -30,7 +30,7 @@ SELECT * FROM pg_timezone_names
 timezone = 'America/Sao_Paulo'
 log_timezone = 'America/Sao_Paulo'
 
---5ª Etapa) Reiniciar o servico do postgresql
+--5ª Etapa) Reiniciar o servico do postgresql. Veja a seguir o procedimento no windows e no linux.
 
 /*
 
@@ -47,7 +47,6 @@ net stop postgresql-x64-9.6 && net start postgresql-x64-9.6
 Caso não saiba o nome do servico execute o comando abaixo para retornar o nome do servico
 
 sc queryex type= service state= all | find /i "Postgresql"
-
 
 
 --No linux
