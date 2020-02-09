@@ -291,7 +291,7 @@ VALUES
 ('2020-03-19 23:59:30', '1 years 6 months 2 days 2 hours 2 minutes 2 seconds');
 
 /*
-Exibe as devoluções dos veículos na coluna "data_devolucao
+Exibe as devoluções dos veículos na coluna "data_devolucao"
 */
 SELECT
 id,
