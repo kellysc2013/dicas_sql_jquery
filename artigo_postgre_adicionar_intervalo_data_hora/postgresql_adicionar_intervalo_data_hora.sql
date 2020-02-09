@@ -23,6 +23,12 @@
 */
 --DROP TABLE IF EXISTS tb_pedido;
 
+/**
+*Atenção!!! Descomente o comando abaixo somente se deseja excluir a tabela tb_loc_auto.
+*/
+--DROP TABLE IF EXISTS tb_loc_auto;
+
+
 --Inicio do 1º exemplo
 /**
 *Cria a tabela "tb_exame_paciente". Esta tabela armazena os exames dos pacientes.
@@ -259,3 +265,39 @@ to_char(pedido_data + interval '40 minutes' , 'dd/mm/yyyy hh24:mi:ss') AS data_e
 FROM tb_pedido;
 
 --Fim do 5º exemplo
+
+--Inicio do 6º exemplo
+
+/*Comando para criar a tabela "tb_loc_auto"*/
+CREATE TABLE tb_loc_auto
+(
+ id            serial,
+ data_inicio timestamp,
+ periodo       interval,
+ CONSTRAINT pk_auto_id PRIMARY KEY(id)
+);
+
+/*
+Comando para inserir múltiplos registros na tabela "tb_loc_auto".
+*/
+INSERT INTO tb_loc_auto (data_inicio, periodo)
+VALUES
+('2020-02-13 13:24:12', '2 years'),
+('2020-03-14 19:30:15', '2 months'),
+('2020-03-15 23:45:42', '2 days'),
+('2020-03-16 23:59:30', '2 hours'),
+('2020-03-17 23:59:30', '2 minutes'),
+('2020-03-18 23:59:30', '2 seconds'),
+('2020-03-19 23:59:30', '1 years 6 months 2 days 2 hours 2 minutes 2 seconds');
+
+/*
+Exibe as devoluções dos veículos na coluna "data_devolucao
+*/
+SELECT
+id,
+data_inicio,
+periodo,
+data_inicio + periodo AS data_devolucao
+FROM tb_loc_auto;
+
+--Fim do 6º exemplo
