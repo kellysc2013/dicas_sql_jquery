@@ -193,7 +193,7 @@ CREATE TABLE tb_loc_imoveis
 	data_fim_contrato date
 );
 
-/*Inserir registros na tabela "tb_loc_imoveis"*/
+/*Inseri registros na tabela "tb_loc_imoveis"*/
 INSERT INTO tb_loc_imoveis (loc_id, tipo_id_loc, periodo_renovacao, data_fim_contrato)
 VALUES
 (1221, 1, '1 month 5 days 3 hours 23 minutes', '2021-03-01'),
