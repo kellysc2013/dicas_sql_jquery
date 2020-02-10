@@ -26,3 +26,5 @@ psql -h 127.0.0.1 -U postgres -d db_teste -f /home/kelly/Documentos/blog/subtrai
 Exemplo de utilização do psql no WINDOWS:
 
 psql -h 127.0.0.1 -U postgres -d db_teste -f D:\script_postgre\subtrair_intervalo_de_uma_data.sql
+
+O artigo que contém o script se encontra em: https://jquerydicas.blogspot.com/2014/04/subtrair-intervalo-de-uma-data.html
