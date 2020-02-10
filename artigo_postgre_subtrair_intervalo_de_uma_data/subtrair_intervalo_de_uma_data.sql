@@ -11,7 +11,12 @@
 /**
  *Descomente o comando abaixo somente se desejar excluir a tabela tb_matriculas.
  */
---DROP TABLE IF EXISTS tb_matriculas;
+ --DROP TABLE IF EXISTS tb_matriculas;
+
+/**
+  *Descomente o comando abaixo somente se desejar excluir a tabela tb_loc_imoveis.
+*/
+--DROP TABLE IF EXISTS tb_loc_imoveis
 
 /**
  *1ºExemplo.
@@ -127,7 +132,7 @@ to_char (data_fim_contrato - interval '3 months', 'dd/mm/yyyy') AS oferta_renova
 FROM tb_locacao;
 
 /**
- *3º Exemplo.
+ *3º Exemplo
  */
 
 /**
@@ -173,3 +178,40 @@ SELECT
 COUNT(matricula_id) AS quantidade_alunos
 FROM tb_matriculas
 WHERE data_matricula > CURRENT_DATE - interval '7 days';
+
+
+/**
+ *4º Exemplo
+ */
+ 
+/*Cria a tabela "tb_loc_imoveis"*/
+CREATE TABLE tb_loc_imoveis
+(
+	loc_id integer,
+	tipo_id_loc integer,
+	periodo_renovacao interval,
+	data_fim_contrato date
+);
+
+/*Inserir registros na tabela "tb_loc_imoveis"*/
+INSERT INTO tb_loc_imoveis (loc_id, tipo_id_loc, periodo_renovacao, data_fim_contrato)
+VALUES
+(1221, 1, '1 month 5 days 3 hours 23 minutes', '2021-03-01'),
+(1421, 2, '1 year 1 month',  '2021-04-05'),
+(1423, 3, '15 days 1 hour',  '2021-05-15'),
+(1221, 1, '1 month 5 days 3 hours 23 minutes',  '2021-08-12'),
+(1421, 2, '1 year 1 month', '2021-09-17'),
+(1423, 3, '15 days 1 hour',  '2021-10-20');
+
+
+/*
+Para calcular as datas de oferta de renovação executamos a consulta abaixo.
+Após a execução da consulta, será exibido o resultado na coluna com o alias "oferta_renovacao".
+*/
+SELECT
+loc_id,
+tipo_id_loc,
+periodo_renovacao,
+data_fim_contrato,
+data_fim_contrato - periodo_renovacao AS oferta_renovacao
+FROM tb_loc_imoveis;
