@@ -11,7 +11,7 @@
 /**
  *Descomente o comando abaixo somente se desejar excluir a tabela tb_matriculas.
  */
- --DROP TABLE IF EXISTS tb_matriculas;
+--DROP TABLE IF EXISTS tb_matriculas;
 
 /**
  *Descomente o comando abaixo somente se desejar excluir a tabela tb_loc_imoveis.
