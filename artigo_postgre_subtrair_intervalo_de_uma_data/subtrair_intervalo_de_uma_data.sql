@@ -1,4 +1,4 @@
-﻿/**
+/**
  *Descomente o comando abaixo somente se desejar excluir a tabela tb_produtos.
  */
 --DROP TABLE IF EXISTS tb_produtos;
@@ -14,8 +14,8 @@
  --DROP TABLE IF EXISTS tb_matriculas;
 
 /**
-  *Descomente o comando abaixo somente se desejar excluir a tabela tb_loc_imoveis.
-*/
+ *Descomente o comando abaixo somente se desejar excluir a tabela tb_loc_imoveis.
+ */
 --DROP TABLE IF EXISTS tb_loc_imoveis;
 
 /**
