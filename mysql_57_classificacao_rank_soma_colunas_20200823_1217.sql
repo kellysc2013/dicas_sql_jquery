@@ -39,8 +39,8 @@ SELECT
 @posicao:=
     CASE
         WHEN (@total_pontos = IFNULL(pontos_jogo_1, 0) + IFNULL(pontos_jogo_2, 0) + IFNULL(pontos_jogo_3, 0)) 
-			THEN @posicao
-			ELSE @posicao + 1
+		THEN @posicao
+		ELSE @posicao + 1
     END
 AS classificacao,
 time_codigo,
