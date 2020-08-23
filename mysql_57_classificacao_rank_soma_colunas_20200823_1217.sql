@@ -3,12 +3,12 @@
  */
 CREATE TABLE tb_classificacao
 (
-	time_codigo integer not null,
+    time_codigo integer not null,
     time_nome varchar(255) not null,
     pontos_jogo_1 integer  not null,
     pontos_jogo_2 integer  not null,
     pontos_jogo_3  integer not null,
-	CONSTRAINT pk_inscricao PRIMARY KEY(time_codigo)
+    CONSTRAINT pk_inscricao PRIMARY KEY(time_codigo)
 );
 
 /*
