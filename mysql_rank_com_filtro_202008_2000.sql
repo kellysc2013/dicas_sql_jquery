@@ -22,7 +22,8 @@ WHERE filtro.classificacao = 5
 
 
 /*Rank com filtro no mysql 5*/
-SELECT * FROM (
+SELECT * FROM 
+(
   SELECT
   @posicao:=
   CASE
