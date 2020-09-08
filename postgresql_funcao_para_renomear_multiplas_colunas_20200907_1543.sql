@@ -40,8 +40,8 @@ CREATE OR REPLACE FUNCTION fnc_renomear_multiplas_colunas
 	
 	/*
 	Parâmetro do tipo array. Este é um array multidimensional. 
-	No primeiro parâmetro passar o nome atual da coluna.
-	No segundo parâmetro passar o novo nome da coluna.	
+	No primeiro parâmetro deve ser passado o nome atual da coluna.
+	No segundo parâmetro deve ser passado o novo nome da coluna.	
 	*/
 	nome_colunas character varying[],
 	
