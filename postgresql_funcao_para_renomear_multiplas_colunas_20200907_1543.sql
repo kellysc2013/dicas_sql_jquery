@@ -96,8 +96,13 @@ BEGIN
 	/*
 	Loop, que gera o comando de alteração de colunas
 	e atribui a variavel "str_renomeia_coluna"
+	
+	array_lower(nome_colunas, 1) =>  1 => obtem o índice do primeiro elemento do array nome_colunas  => 'id', 'modalidade_desc', 'observacao' (linha 1 - 1ªcoluna)  
+	array_upper(nome_colunas, 1) =>  3 => obtem o índice do último elemento do array nome_colunas  => 'id', 'modalidade_desc', 'observacao' (linha 3 - 1ª coluna)
 	*/	
+	--FOR  - Faz o loop de 1 a 3 pois são três linhas
 	FOR i IN array_lower(nome_colunas, 1) .. array_upper(nome_colunas, 1) LOOP
+		
 		str_renomeia_coluna := 
 		CONCAT
 		(
