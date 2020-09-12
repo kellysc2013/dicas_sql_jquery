@@ -63,8 +63,10 @@ AS $BODY$
 DECLARE
 	/*string que armazena o comando que renomeia a(s) coluna(s). "ALTER TABLE...RENAME...TO"*/
 	str_renomeia_coluna text;
+	
 	/*armazena o retorno da execução, se as colunas foram renomeadas com sucesso ou não*/	
 	msg character varying;
+	
 	/*armazena o retorno da verificação de existência da tabela*/	
 	verifica_tabela boolean;
 BEGIN
