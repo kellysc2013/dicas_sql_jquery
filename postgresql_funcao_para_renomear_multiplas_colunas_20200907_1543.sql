@@ -61,7 +61,7 @@ LANGUAGE 'plpgsql'
     
 AS $BODY$
 DECLARE
-	/*string que armazena o comando que renomeia a(s) coluna(s)*/
+	/*string que armazena o comando que renomeia a(s) coluna(s). "ALTER TABLE...RENAME...TO"*/
 	str_renomeia_coluna text;
 	/*armazena o retorno da execução, se as colunas foram renomeadas com sucesso ou não*/	
 	msg character varying;
