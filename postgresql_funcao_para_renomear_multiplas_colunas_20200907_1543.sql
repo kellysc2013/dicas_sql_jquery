@@ -104,6 +104,13 @@ BEGIN
 	--FOR  - Faz o loop de 1 a até n elementos. Neste caso fará o loop de 1 a 3, pois o array nome_colunas possui 3 elementos
 	FOR i IN array_lower(nome_colunas, 1) .. array_upper(nome_colunas, 1) LOOP
 		
+		/*
+		A variável "str_renomeia_coluna" armazena o comando que renomeará as colunas. Exemplo:
+		ALTER TABLE public.esporte RENAME id TO cod; 
+		ALTER TABLE public.esporte RENAME modalidade_desc TO modalidade_descricao; 
+		ALTER TABLE public.esporte RENAME  observacao TO obs;
+		*/
+		
 		str_renomeia_coluna := 
 		CONCAT
 		(
@@ -116,7 +123,14 @@ BEGIN
 				quote_ident(nome_colunas[i][1]), 
 				quote_ident(nome_colunas[i][2])
 			)
-		);					
+		);
+							 
+		/*
+		O elemento nome_colunas[i][1] armazena o nome atual da coluna.
+		O elemento nome_colunas[i][2] armazena o novo nome da coluna.		
+		*/	
+							 
+							 
 	END LOOP;
 	
 	--Comentario para debug	
