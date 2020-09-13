@@ -5,7 +5,7 @@
 --DROP TABLE IF EXISTS scm_teste.esporte;
 
 --Exclui o schema "scm_teste"
---DROP SCHEMA scm_teste;
+--DROP SCHEMA IF EXISTS scm_teste;
 
 --Cria a tabela "esporte"
 CREATE TABLE esporte
