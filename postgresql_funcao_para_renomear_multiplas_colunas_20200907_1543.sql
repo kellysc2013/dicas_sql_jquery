@@ -99,8 +99,9 @@ BEGIN
 	
 	array_lower(nome_colunas, 1) => Neste exemplo, o valor é 1 => obtem o índice do primeiro elemento do array nome_colunas  => array['id','cod']   
 	array_upper(nome_colunas, 1) => Neste exemplo, o valor é 3 => obtem o índice do último   elemento do array nome_colunas  => array['observacao', 'obs']
-	*/	
-	--FOR  - Faz o loop de 1 a 3 pois são três linhas
+	*/
+	
+	--FOR  - Faz o loop de 1 a até n elementos. Neste caso fará o loop de 1 a 3, pois o array nome_colunas possui 3 elementos
 	FOR i IN array_lower(nome_colunas, 1) .. array_upper(nome_colunas, 1) LOOP
 		
 		str_renomeia_coluna := 
