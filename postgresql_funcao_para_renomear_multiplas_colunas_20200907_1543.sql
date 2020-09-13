@@ -94,7 +94,7 @@ BEGIN
 	END IF;	
 	
 	/*
-	Loop, que gera o comando de alteração de colunas
+	Loop, que gera o comando que renomeia as colunas
 	e atribui a variavel "str_renomeia_coluna"
 	
 	array_lower(nome_colunas, 1) => Neste exemplo, o valor é 1 => obtem o índice do primeiro elemento do array nome_colunas  => array['id','cod']   
@@ -138,7 +138,7 @@ BEGIN
 	
 	BEGIN
 	
-		--Executa o comando que faz a alteração de coluna(s).
+		--Executa o comando que renomeia as coluna(s).
 		EXECUTE str_renomeia_coluna;
 		
 		/*
