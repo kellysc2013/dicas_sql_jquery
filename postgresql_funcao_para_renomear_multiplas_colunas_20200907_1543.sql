@@ -189,7 +189,11 @@ SELECT * FROM esporte;
 Executa a função: fnc_renomear_multiplas_colunas
 Observação: 3º parâmetro não foi declarado pois não é obrigatório.
 Quando não declarado o schema será considerado public.
+							 
+Descomente para executar
 */
+
+/*							 
 SELECT fnc_renomear_multiplas_colunas
 (
 	'esporte',
@@ -201,10 +205,12 @@ SELECT fnc_renomear_multiplas_colunas
 	]
 	::varchar[][]
 );
+							 
 
 --Visualiza a tabela "esporte"
 SELECT * FROM esporte;
-
+*/
+							 
 
 /*
 3º Exemplo
@@ -232,8 +238,12 @@ SELECT * FROM scm_teste.esporte;
 /*
 3º Exemplo
 Executa a função: fnc_renomear_multiplas_colunas
-Será retornado um erro pois a tabela 'esportey' não existe.   
+Será retornado um erro pois a tabela 'esportey' não existe.
+							 
+Descomente para executar							 
 */
+
+/*							 
 SELECT fnc_renomear_multiplas_colunas
 (
 	'esportey',
@@ -245,13 +255,17 @@ SELECT fnc_renomear_multiplas_colunas
 	]
 	::varchar[][]
 );
-
+*/
 
 /*
 4º Exemplo
 Executa a função: fnc_renomear_multiplas_colunas
-Será retornado um erro pois a coluna 'modalidade_descx' não existe.   
+Será retornado um erro pois a coluna 'modalidade_descx' não existe.
+
+Descomente para executar							 
 */
+
+/*							 
 SELECT fnc_renomear_multiplas_colunas
 (
 	'esporte',
@@ -263,3 +277,4 @@ SELECT fnc_renomear_multiplas_colunas
 	]
 	::varchar[][]
 );
+*/							 
