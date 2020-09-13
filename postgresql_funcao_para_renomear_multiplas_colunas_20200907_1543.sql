@@ -161,7 +161,10 @@ BEGIN
 END
 $BODY$;
 
-
+/*
+	Segue abaixo 6 exemplos para executar esta função:							 
+*/
+							 
 
 /*
 1º Exemplo
