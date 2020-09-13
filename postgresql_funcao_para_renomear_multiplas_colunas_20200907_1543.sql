@@ -239,7 +239,7 @@ SELECT * FROM scm_teste.esporte;
 
 
 /*
-3º Exemplo
+4º Exemplo
 Executa a função: fnc_renomear_multiplas_colunas
 Será retornado um erro pois a tabela 'esportey' não existe.
 							 
@@ -261,7 +261,7 @@ SELECT fnc_renomear_multiplas_colunas
 */
 
 /*
-4º Exemplo
+5º Exemplo
 Executa a função: fnc_renomear_multiplas_colunas
 Será retornado um erro pois a coluna 'modalidade_descx' não existe.
 
@@ -280,4 +280,24 @@ SELECT fnc_renomear_multiplas_colunas
 	]
 	::varchar[][]
 );
-*/							 
+*/
+							 
+/*
+6º Exemplo
+Executa a função: fnc_renomear_multiplas_colunas
+Observação: o array é declarado utilizando chaves.
+
+Descomente para executar
+*/
+/*
+SELECT fnc_renomear_multiplas_colunas
+(
+	'esporte',
+	'{
+		{id,cod},
+		{modalidade_desc, modalidade_descricao},
+		{observacao, obs}	
+	}'
+	::varchar[][]	
+);
+*/
