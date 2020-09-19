@@ -39,9 +39,9 @@ ADD COLUMN dt_ev_inicio date,
 ADD COLUMN dt_ev_fim date; 
 
 /*Para atualizarmos as datas utilizaremos os comandos abaixo:*/
-UPDATE esporte SET dt_ev_inicio = '2017-09-02', dt_ev_fim = '2017-10-25'  WHERE id = 1;
-UPDATE esporte SET dt_ev_inicio = '2017-08-02', dt_ev_fim = '2017-08-28'  WHERE id = 2;
-UPDATE esporte SET dt_ev_inicio = '2017-08-10', dt_ev_fim = '2017-08-26'  WHERE id = 3;
+UPDATE esporte SET dt_ev_inicio = TO_DATE('02/09/2017', 'dd/mm/yyyy'), dt_ev_fim = TO_DATE('25/10/2017', 'dd/mm/yyyy')  WHERE id = 1;
+UPDATE esporte SET dt_ev_inicio = TO_DATE('02/08/2017', 'dd/mm/yyyy'), dt_ev_fim = TO_DATE('28/08/2017', 'dd/mm/yyyy')  WHERE id = 2;
+UPDATE esporte SET dt_ev_inicio = TO_DATE('10/08/2017', 'dd/mm/yyyy'), dt_ev_fim = TO_DATE('26/08/2017', 'dd/mm/yyyy')  WHERE id = 3;
 
 /*Visualize a tabela atualizada:*/
 SELECT * FROM esporte;
