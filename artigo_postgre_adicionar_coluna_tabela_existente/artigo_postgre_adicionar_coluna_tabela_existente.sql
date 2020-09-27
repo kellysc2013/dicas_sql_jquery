@@ -24,11 +24,8 @@ SELECT * FROM esporte;
 /*atletismo não está disponivel*/
 UPDATE esporte SET disponibilidade = false WHERE id = 1;
 
-/*futebol está disponivel*/
-UPDATE esporte SET disponibilidade = true WHERE id = 2;
-
-/*natação está disponivel*/
-UPDATE esporte SET disponibilidade = true WHERE id = 3;
+/*futebol e natação estão disponíveis*/
+UPDATE esporte SET disponibilidade = true WHERE id IN (2,3); 
 
 /*Visualize a tabela atualizada:*/
 SELECT * FROM esporte;
