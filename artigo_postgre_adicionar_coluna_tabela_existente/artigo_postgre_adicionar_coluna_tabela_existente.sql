@@ -91,9 +91,10 @@ UPDATE esporte SET categoria = 'coletivo' WHERE id = 2;
 /* 
 Agora que não há dados nulos, vamos tornar a coluna obrigatória.
 SINTAXE
-*/ 
 
 ALTER TABLE nome_da_tabela ALTER COLUMN nome_da_coluna SET NOT NULL;
+*/
+ALTER TABLE esporte ALTER COLUMN categoria SET NOT NULL;
 
 /*
 Caso queira tornar a coluna "categoria" NÃO obrigatória (opcional) novamente execute o comando abaixo:
