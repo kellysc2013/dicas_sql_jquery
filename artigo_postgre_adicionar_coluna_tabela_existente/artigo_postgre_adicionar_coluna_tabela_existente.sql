@@ -3,7 +3,7 @@
  *Veja em: https://jquerydicas.blogspot.com/2013/10/criar-uma-coluna-em-uma-tabela.html
  */
 
-/*Criar tabela esporte*/
+/*Criar a tabela esporte*/
 CREATE TABLE esporte 
 (
     id serial,
@@ -19,7 +19,7 @@ INSERT INTO esporte (esport_desc) VALUES('natacão');
 SELECT * FROM esporte;
 
 /*
- *1º Exemplo
+ *1º) Exemplo
  *Criar a coluna "disponibilidade" para indicar a modalidade esportiva
  */
 ALTER TABLE esporte ADD COLUMN  disponibilidade boolean;
@@ -39,7 +39,7 @@ UPDATE esporte SET disponibilidade = true WHERE id IN (2,3);
 SELECT * FROM esporte;
 
 /*
- *2º Exemplo
+ *2º) Exemplo
  *Há possibilidade de criar uma ou mais colunas em um único comando:
  */
 
