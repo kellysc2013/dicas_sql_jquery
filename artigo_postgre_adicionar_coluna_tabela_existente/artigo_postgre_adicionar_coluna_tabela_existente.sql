@@ -68,8 +68,8 @@ SELECT COUNT(*) FROM esporte;
 /*
 a) Caso não haja dados na tabela
 */
-
-ALTER TABLE esporte ADD COLUMN  categoria  varchar(80)  NOT NULL;
+--Descomente o comando para executar. Deixei comentado, pois neste exemplo a tabela "esporte" tem dados
+--ALTER TABLE esporte ADD COLUMN  categoria  varchar(80)  NOT NULL;
 
 /*
 b) Caso haja dados na tabela. Primeiramente crie a coluna como não obrigatória
@@ -95,14 +95,13 @@ SINTAXE
 
 ALTER TABLE nome_da_tabela ALTER COLUMN nome_da_coluna SET NOT NULL;
 
-
 /*
 Caso queira tornar a coluna "categoria" NÃO obrigatória (opcional) novamente execute o comando abaixo:
- 
 SINTAXE
-*/
 
 ALTER TABLE nome_da_tabela ALTER COLUMN nome_da_coluna DROP NOT NULL;
+*/
+
 
 /* 
 Exemplo:
