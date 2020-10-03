@@ -102,7 +102,6 @@ SINTAXE
 ALTER TABLE nome_da_tabela ALTER COLUMN nome_da_coluna DROP NOT NULL;
 */
 
-
 /* 
 Exemplo:
 */ 
