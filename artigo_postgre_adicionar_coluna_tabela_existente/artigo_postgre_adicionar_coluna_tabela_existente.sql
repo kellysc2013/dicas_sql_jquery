@@ -1,3 +1,8 @@
+/*
+ *Estes exemplos pertencem ao artigo: Criar uma coluna em uma tabela existente no PostgreSql
+ *Veja em: https://jquerydicas.blogspot.com/2013/10/criar-uma-coluna-em-uma-tabela.html
+ */
+
 /*Criar tabela esporte*/
 CREATE TABLE esporte 
 (
