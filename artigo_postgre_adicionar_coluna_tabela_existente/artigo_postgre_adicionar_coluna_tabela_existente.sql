@@ -54,3 +54,57 @@ UPDATE esporte SET dt_ev_inicio = TO_DATE('10/08/2017', 'dd/mm/yyyy'), dt_ev_fim
 
 /*Visualize a tabela atualizada:*/
 SELECT * FROM esporte;
+
+/*
+3º) Exemplo
+ 
+Criar na tabela "esporte", uma coluna obrigatória chamada "categoria", ou seja, que exige que o dado seja obrigatório (não nulo).
+
+Antes de criar a coluna devemos verificar se há dados na tabela, para isso vamos utilizar a função "COUNT", esta função conta o número de linhas de uma tabela.
+*/
+
+SELECT COUNT(*) FROM esporte;
+
+/*
+a) Caso não haja dados na tabela
+*/
+
+ALTER TABLE esporte ADD COLUMN  categoria  varchar(80)  NOT NULL;
+
+/*
+b) Caso haja dados na tabela. Primeiramente crie a coluna como não obrigatória
+*/
+
+ALTER TABLE esporte ADD COLUMN  categoria  varchar(80);
+
+/* 
+Atualize os dados da coluna antes de torna-lá obrigatória (não nula).
+Segue a atualização de dados através do comando UPDATE.
+*/
+  
+/*foi atribuído a futebol categoria "coletivo"*/
+UPDATE esporte SET categoria = 'coletivo' WHERE id = 2;
+
+/*foi atribuído a atletismo e natação a categoria "individual"*/
+ UPDATE esporte SET categoria = 'individual' WHERE id IN (1,3);
+
+/* 
+Agora que não há dados nulos, vamos tornar a coluna obrigatória.
+SINTAXE
+*/ 
+
+ALTER TABLE nome_da_tabela ALTER COLUMN nome_da_coluna SET NOT NULL;
+
+
+/*
+Caso queira tornar a coluna "categoria" NÃO obrigatória (opcional) novamente execute o comando abaixo:
+ 
+SINTAXE
+*/
+
+ALTER TABLE nome_da_tabela ALTER COLUMN nome_da_coluna DROP NOT NULL;
+/* 
+Exemplo:
+*/
+ 
+ALTER TABLE esporte ALTER COLUMN categoria DROP NOT NULL;
