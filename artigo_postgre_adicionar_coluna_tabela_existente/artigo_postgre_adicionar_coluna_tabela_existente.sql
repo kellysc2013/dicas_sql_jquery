@@ -13,7 +13,6 @@ INSERT INTO esporte (esport_desc) VALUES('natacão');
 /*Selecionar os registros da tabela esporte*/
 SELECT * FROM esporte;
 
-
 /*
  *1º Exemplo
  *Criar a coluna "disponibilidade" para indicar a modalidade esportiva
