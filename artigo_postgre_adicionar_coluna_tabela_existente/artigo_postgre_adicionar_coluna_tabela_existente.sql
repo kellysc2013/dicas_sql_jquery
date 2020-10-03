@@ -13,7 +13,11 @@ INSERT INTO esporte (esport_desc) VALUES('natacão');
 /*Selecionar os registros da tabela esporte*/
 SELECT * FROM esporte;
 
-/*Criar a coluna "disponibilidade" para indicar a modalidade esportiva*/
+
+/*
+ *1º Exemplo
+ *Criar a coluna "disponibilidade" para indicar a modalidade esportiva
+ */
 ALTER TABLE esporte ADD COLUMN  disponibilidade boolean;
 
 /*Visualizar a coluna que acabamos de criar*/
@@ -30,7 +34,11 @@ UPDATE esporte SET disponibilidade = true WHERE id IN (2,3);
 /*Visualize a tabela atualizada:*/
 SELECT * FROM esporte;
 
-/*Há possibilidade de criar um ou mais campos em um único comando:*/
+/*
+ *2º Exemplo
+ *Há possibilidade de criar uma ou mais colunas em um único comando:
+ */
+
 ALTER TABLE esporte 
 ADD COLUMN dt_ev_inicio date, 
 ADD COLUMN dt_ev_fim date; 
