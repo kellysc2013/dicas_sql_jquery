@@ -78,7 +78,7 @@ b) Caso haja dados na tabela. Primeiramente crie a coluna como não obrigatória
 ALTER TABLE esporte ADD COLUMN  categoria  varchar(80);
 
 /* 
-Atualize os dados da coluna antes de torna-lá obrigatória (não nula).
+Atualize os dados da coluna antes de torná-la obrigatória (não nula).
 Segue a atualização de dados através do comando UPDATE.
 */
   
