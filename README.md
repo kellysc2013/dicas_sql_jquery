@@ -1,9 +1,8 @@
-dicas_sql_jquery
-================
+Dicas Sql & Jquery
 
-Dicas Sql &amp; Jquery
+Scripts sql: postgresql, mysql, sqlserver
 
-Estes scripts são os exemplos dos artigos do blog "Dicas Sql &amp; Jquery".
+Estes scripts são os exemplos dos artigos do blog "Dicas Sql & Jquery".
 O blog contém dicas de sql.
 
 http://jquerydicas.blogspot.com.br
