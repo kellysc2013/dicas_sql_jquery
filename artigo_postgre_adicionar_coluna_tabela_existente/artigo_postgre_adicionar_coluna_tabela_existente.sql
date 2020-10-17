@@ -109,3 +109,50 @@ ALTER TABLE nome_da_tabela ALTER COLUMN nome_da_coluna DROP NOT NULL;
 Exemplo:
 */ 
 ALTER TABLE esporte ALTER COLUMN categoria DROP NOT NULL;
+
+/*
+5º) Exemplo
+
+Criar uma coluna chamada "modalidade_ativa" do tipo "boolean" com valor "DEFAULT" (padrão) igual a "true".
+ 
+SINTAXE
+ 
+ALTER TABLE nome_da_tabela ADD COLUMN nome_da_coluna  tipo_de_dado  DEFAULT valor_padrao;
+ 
+Exemplo:
+*/ 
+
+ALTER TABLE esporte ADD COLUMN modalidade_ativa boolean DEFAULT true;
+ 
+/* 
+6º) Exemplo
+ 
+Criar uma coluna chamada "data_hora_criacao" do tipo "timestamp without time zone"  com valor "DEFAULT" igual a "data e hora atual".
+ 
+SINTAXE
+ 
+ALTER TABLE nome_da_tabela ADD COLUMN nome_da_coluna tipo_de_dado DEFAULT valor_padrao;
+*/ 
+
+ALTER TABLE esporte ADD COLUMN data_hora_criacao timestamp without time zone DEFAULT current_timestamp;
+
+/* 
+
+7º) Exemplo
+ 
+ Remover o valor DEFAULT de uma coluna:
+ 
+SINTAXE
+ 
+ALTER TABLE nome_da_tabela ALTER COLUMN nome_da_coluna DROP DEFAULT;
+ 
+Exemplos:
+*/ 
+
+--a) Remover o valor "DEFAULT" da coluna "modalidade_ativa".
+ 
+ALTER TABLE esporte ALTER COLUMN modalidade_ativa DROP DEFAULT;
+ 
+--b) Remover o valor "DEFAULT" da coluna "data_hora_criacao".
+ 
+ALTER TABLE esporte ALTER COLUMN data_hora_criacao DROP DEFAULT;
