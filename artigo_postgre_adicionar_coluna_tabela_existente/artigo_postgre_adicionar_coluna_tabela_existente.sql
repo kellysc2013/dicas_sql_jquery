@@ -140,7 +140,7 @@ ALTER TABLE esporte ADD COLUMN data_hora_criacao timestamp without time zone DEF
 
 7º) Exemplo
  
- Remover o valor DEFAULT de uma coluna:
+Remover o valor DEFAULT de uma coluna:
  
 SINTAXE
  
