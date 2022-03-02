@@ -1,6 +1,8 @@
 --Modelo de recursidade no postgresql
 --09/09/2018 13:51
-drop TABLE GER_FUNCIONARIO
+--Exclui a tabela "GER_FUNCIONARIO"
+--DROP TABLE GER_FUNCIONARIO
+
 --Criar tabela "ger_funcionario"
 CREATE TABLE GER_FUNCIONARIO
 (
