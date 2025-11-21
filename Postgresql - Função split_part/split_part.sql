@@ -52,14 +52,17 @@ SELECT * FROM clientes;
  -exibir a coluna usuario - 1ª parte do split antes do @
  -exibir a coluna dominio - 2ª parte do split depois do @
 */
+--Veja os resultado para os e-mails válidos
 SELECT 
 e_mail,
 split_part(e_mail, '@', 1),
 split_part(e_mail, '@', 2)
-FROM clientes;
+FROM clientes
+WHERE id <= 3;
 
 /*
- -Exibir a coluna e-mail
+  Exibir query que retorna os registros válidos com as colunas  
+ -e-mail
  -exibir a coluna usuario - 1ª parte do split antes do @ com alias (apelido) para o nome da coluna para facilitar a identificação da coluna.
  -exibir a coluna dominio - 2ª parte do split depois do @ com alias (apelido) para o nome da coluna para facilitar a identificação da coluna.
 */
@@ -67,4 +70,25 @@ SELECT
 e_mail,
 split_part(e_mail, '@', 1) AS usuario,
 split_part(e_mail, '@', 2) AS dominio
-FROM clientes;
+FROM clientes
+WHERE id <= 3;
+
+/*
+ Antes de usar "SPLIT_PART", verifique 
+  -se o delimitador existe na string: para evitar resultados inesperados. Neste exemplo foi o "@".
+  -se o delimitador está bem posicionado: no caso deste exemplo, em específico, verificar se o "@" não está no início ou no fim do e-mail
+ Se o delimitador NÃO for encontrado ou estiver mal posicionado, algum pedaço de string será vazia.
+*/
+
+/*
+  Exibir query que retorna os registro inválidos com as colunas  
+ -e-mail
+ -exibir a coluna usuario - 1ª parte do split antes do @ com alias (apelido) para o nome da coluna para facilitar a identificação da coluna.
+ -exibir a coluna dominio - 2ª parte do split depois do @ com alias (apelido) para o nome da coluna para facilitar a identificação da coluna.
+*/
+SELECT 
+e_mail,
+split_part(e_mail, '@', 1) AS usuario,
+split_part(e_mail, '@', 2) AS dominio
+FROM clientes
+WHERE id > 3;
