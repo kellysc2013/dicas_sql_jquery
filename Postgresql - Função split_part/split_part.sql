@@ -31,10 +31,16 @@ CREATE table clientes
 /*
   Inserir dados na tabela clientes
 */
+--Insert de e-mails válidos
 INSERT INTO clientes (nome, e_mail) VALUES ('Maria Silva',    'maria@gmail.com');
 INSERT INTO clientes (nome, e_mail) VALUES ('João Sousa',     'joao123@outlook.com');
 INSERT INTO clientes (nome, e_mail) VALUES ('Carolina Alves', 'carolina.alves@empresax.com.br');
 
+--Insert de e-mails inválidos
+INSERT INTO clientes (nome, e_mail) VALUES ('Joana Pereira',  'joanaoutlook.com');
+INSERT INTO clientes (nome, e_mail) VALUES ('Carlos Novaes',  'carlos@');
+INSERT INTO clientes (nome, e_mail) VALUES ('Carla Santos',   'carlagmail.com@');
+INSERT INTO clientes (nome, e_mail) VALUES ('Paulo Gomes',    '@paulogomesgmail.com');
 
 /*
  Exibir os dados da tabela clientes com todas as colunas
