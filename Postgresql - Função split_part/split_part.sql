@@ -43,7 +43,7 @@ INSERT INTO clientes (nome, e_mail) VALUES ('Carla Santos',   'carlagmail.com@')
 INSERT INTO clientes (nome, e_mail) VALUES ('Paulo Gomes',    '@paulogomesgmail.com');
 
 /*
- Exibir os dados da tabela clientes com todas as colunas
+ Exibir os registros da tabela clientes com todas as colunas
 */
 SELECT * FROM clientes;
 
@@ -52,7 +52,7 @@ SELECT * FROM clientes;
  -exibir a coluna usuario - 1ª parte do split antes do @
  -exibir a coluna dominio - 2ª parte do split depois do @
 */
---Veja os resultado para os e-mails válidos
+--Veja os registros que possuem e-mails válidos
 SELECT 
 e_mail,
 split_part(e_mail, '@', 1),
@@ -61,7 +61,7 @@ FROM clientes
 WHERE id <= 3;
 
 /*
-  Exibir query que retorna os registros válidos com as colunas  
+  Exibir os registros válidos com as colunas:  
  -e-mail
  -exibir a coluna usuario - 1ª parte do split antes do @ com alias (apelido) para o nome da coluna para facilitar a identificação da coluna.
  -exibir a coluna dominio - 2ª parte do split depois do @ com alias (apelido) para o nome da coluna para facilitar a identificação da coluna.
@@ -81,10 +81,10 @@ WHERE id <= 3;
 */
 
 /*
-  Exibir query que retorna os registro inválidos com as colunas  
+  Exibir os registro inválidos com as colunas:  
  -e-mail
- -exibir a coluna usuario - 1ª parte do split antes do @ com alias (apelido) para o nome da coluna para facilitar a identificação da coluna.
- -exibir a coluna dominio - 2ª parte do split depois do @ com alias (apelido) para o nome da coluna para facilitar a identificação da coluna.
+ -exibir a coluna usuario: 1ª parte do split antes do @ com alias (apelido) para o nome da coluna para facilitar a identificação da coluna.
+ -exibir a coluna dominio: 2ª parte do split depois do @ com alias (apelido) para o nome da coluna para facilitar a identificação da coluna.
 */
 SELECT 
 e_mail,
