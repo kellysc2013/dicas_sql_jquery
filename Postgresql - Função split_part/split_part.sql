@@ -1,4 +1,7 @@
 /*
+ Veja o artigo referente a este script em:
+ https://jquerydicas.blogspot.com/2025/11/postgresql-funcao-splitpart.html
+ 
  Exemplo da função split_part no Postgresql
  A função split_part divide a string em duas ou mais partes (pedaços) e retorna um determinado pedaço de acordo com a posição escohida. 
  SINTAXE
